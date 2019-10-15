@@ -95,9 +95,9 @@ Con el uso de este tipo de interrupciones conseguimos detectar cualquier cambio 
 
 Para declarar el uso de este tipo de interrupciones no es necesitamos el uso de ninguna librería, con la siguiente instrucción las declaramos:
       
-      attachInterrupt(digitalPinToInterrupt(pinBoton), pararDado, CHANGE);*
+      attachInterrupt(digitalPinToInterrupt(pinBoton), pararDado, CHANGE);
                  Asociamos el pin 3 a la interrupción   Función    Detección de la Interrupción
            
  La secuencia de instrucciones dentro de cualquier interrupción debe ser lo más sencilla y corta posible, así que en esta interrupción me limito a cambiar el valor de una variable booleana que en el programa principal utilizaré para parar el dado y mostrar el número correspondiente al momento de la pulsación. <br />
  
-Y esto es todo, en el código *matriz_mascaras.ino* podéis encontrar otros comentarios más detallados acerca del programa. 
+Y esto es todo, en el código <*matriz_mascaras.ino*> podéis encontrar otros comentarios más detallados acerca del programa. 
