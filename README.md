@@ -8,18 +8,18 @@ Display de 7 segmentos controlado aplicando máscaras a los puertos y utilizando
 Este proyecto puede ser fácil de programar con una programación básica, pero me he basado en las alternativas mostradas en el curso de Arduino Avanzado para crear este dado electrónico optimizado y de mayor eficacia que el que se podría obtener con una programación más sencilla.
 
 Materiales utilizados:
- *Placa de desarrollo Arduino Uno
- *Display o visualizador de 7 segmentos
- *Potenciómetro
- *Botón o pulsador
- *Protoboard
- *8 Resistencias de 220 Ohmios
- *Cables macho-macho 
+* Placa de desarrollo Arduino Uno
+* Display o visualizador de 7 segmentos
+* Potenciómetro
+* Botón o pulsador
+* Protoboard
+* 8 Resistencias de 220 Ohmios
+* Cables macho-macho 
 
 Las características a resaltar en este proyecto son:
- *Máscaras para control de puertos
- *Interrupciones software
- *Interrupciones hardware  
+* Máscaras para control de puertos
+* Interrupciones software
+* Interrupciones hardware  
 <br />
 
 Para comenzar conectaremos el display de 7 segmentos a los puertos digitales numerados de 0-7 en nuestro Arduino.
