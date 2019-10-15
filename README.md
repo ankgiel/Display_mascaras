@@ -20,6 +20,7 @@ Las características a resaltar en este proyecto son:
  *Interrupciones software
  *Interrupciones hardware  
 <br />
+
 Para comenzar conectaremos el display de 7 segmentos a los puertos digitales numerados de 0-7 en nuestro Arduino.
 Mis conexiones son las siguientes:
 
@@ -84,8 +85,9 @@ Para la creación de esta interrupción software he utilizado la librería Timer
 
 Anotar que las variables que cambian su valor dentro de las interrupciones deben ser declaradas como volátiles
     
-    volatile int espera;  
+    volatile int espera;    
 <br />
+
 Por último, la tercera característica destacable es el uso de un pulsador para parar el dado. Si queremos que nuestro programe reaccione a las pulsaciones de forma instantánea, sin tener que mantener pulsado el botón durante unos instantes para que cuando llegue el programa al punto de lectura del valor del botón éste lo detecte como pulsado, la única y mejor opción que tenemos es utilizar una interrupción hardware. 
 Con el uso de este tipo de interrupciones conseguimos detectar cualquier cambio en la señal de entrada de los pines con acceso a interrupciones hardware. En el caso de mi placa de desarrollo Arduino Uno, los pines con capacidad para usar interrupciones hardware son los pines 2 y 3. Para este proyecto he decidido usar el pin 3 como interrupción hardware destinada a controlar los pulsos eléctricos recibidos del botón. 
 
@@ -96,6 +98,6 @@ Para declarar el uso de este tipo de interrupciones no es necesitamos el uso de 
       attachInterrupt(digitalPinToInterrupt(pinBoton), pararDado, CHANGE);*
                  Asociamos el pin 3 a la interrupción   Función    Detección de la Interrupción
            
- La secuencia de instrucciones dentro de cualquier interrupción debe ser lo más sencilla y corta posible, así que en esta interrupción me limito a cambiar el valor de una variable booleana que en el programa principal utilizaré para parar el dado y mostrar el número correspondiente al momento de la pulsación.
-<br />
+ La secuencia de instrucciones dentro de cualquier interrupción debe ser lo más sencilla y corta posible, así que en esta interrupción me limito a cambiar el valor de una variable booleana que en el programa principal utilizaré para parar el dado y mostrar el número correspondiente al momento de la pulsación. <br />
+ 
 Y esto es todo, en el código *matriz_mascaras.ino* podéis encontrar otros comentarios más detallados acerca del programa. 
