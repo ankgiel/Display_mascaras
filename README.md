@@ -30,8 +30,7 @@ Mis conexiones son las siguientes:
         SEGMENTO: G F A B P D C E  
  
  
- ![Etiquetado display](https://raw.githubusercontent.com/ankgiel/Display_mascaras/master/etiquetado_display_7_segmentos.png)  
- ![Pines del display](https://raw.githubusercontent.com/ankgiel/Display_mascaras/master/pines_display.PNG)
+ ![Etiquetado display](https://raw.githubusercontent.com/ankgiel/Display_mascaras/master/etiquetado_display_7_segmentos.png)  [Pines del display](https://raw.githubusercontent.com/ankgiel/Display_mascaras/master/pines_display.PNG)
  
  Con mi esquema y la configuración de pines del datasheet, basta con construir una tabla con los valores que debemos dar a los pines para encender y apagar los leds de cada segmento según lo que queramos mostrar, ya sean dígitos o letras, en mi caso, los dígitos del 0 al 9.
  
