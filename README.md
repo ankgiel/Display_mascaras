@@ -22,6 +22,7 @@ Las características a resaltar en este proyecto son:
 * Interrupciones hardware  
 <br />
 
+## Máscaras 
 Para comenzar conectaremos el display de 7 segmentos a los puertos digitales numerados de 0-7 en nuestro Arduino.
 Mis conexiones son las siguientes:
 
@@ -67,6 +68,8 @@ Las principales instrucciones para mostrar una secuencia de nuestros dígitos se
 
 A partir de aquí sólo queda programar la funcionalidad que deseemos ya sea utilizando bucles while, for, aumentando un valor por cada pulsación del botón... Otra opción sería que los números aparezcan de forma aleatoria en lugar de secuencial, esto se podría obtener guardando en *n_actual* un valor aleatorio entre 0 y el número de elementos de nuestro vector.
 <br />
+
+## Interrupción software 
 Otra de las funcionalidades implementadas es la variación en la velocidad con la que se cambian los números que aparecen en el display. Para ello utilizo un potenciometro conectado a la entrada analógica A5 (sexto pin del puerto C) declarado de la siguiente forma:
 
     DDRC = DDRC & B11011111;* 
@@ -89,6 +92,7 @@ Anotar que las variables que cambian su valor dentro de las interrupciones deben
     volatile int espera;    
 <br />
 
+# Interrupción hardware
 Por último, la tercera característica destacable es el uso de un pulsador para parar el dado. Si queremos que nuestro programe reaccione a las pulsaciones de forma instantánea, sin tener que mantener pulsado el botón durante unos instantes para que cuando llegue el programa al punto de lectura del valor del botón éste lo detecte como pulsado, la única y mejor opción que tenemos es utilizar una interrupción hardware. 
 Con el uso de este tipo de interrupciones conseguimos detectar cualquier cambio en la señal de entrada de los pines con acceso a interrupciones hardware. En el caso de mi placa de desarrollo Arduino Uno, los pines con capacidad para usar interrupciones hardware son los pines 2 y 3. Para este proyecto he decidido usar el pin 3 como interrupción hardware destinada a controlar los pulsos eléctricos recibidos del botón. 
 
